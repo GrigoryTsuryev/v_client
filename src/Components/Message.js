@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+import Gif from './Gif';
 
 let messages = []
 function Message({message}) {
@@ -8,9 +8,11 @@ function Message({message}) {
             messages.push(JSON.stringify(message));
         }
       }, [message]);
-
+     
     return (
-        <div>{messages}</div>
+        <div>
+         {messages.map((ms, index) =><Gif key={index} url={JSON.parse(ms).message.image}/>)}
+       </div>
     );
 
 }

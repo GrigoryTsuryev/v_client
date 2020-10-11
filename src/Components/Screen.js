@@ -83,7 +83,7 @@ const URL = 'ws://localhost:3001/websocket'
                 <input type="submit" value="Send" />
              </form>
              
-            <Message message={message}></Message>
+            <Message id={id} message={message}></Message>
             
             </>
         );
